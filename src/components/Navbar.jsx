@@ -1,32 +1,110 @@
-import React, { useState } from 'react';
+import React from "react";
+import {
+  Navbar as MaterialNavbar,
+  Collapse,
+  Typography,
+  IconButton,
+} from "@material-tailwind/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+function NavList() {
+  return (
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Pages
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Account
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Blocks
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
+          Docs
+        </a>
+      </Typography>
+    </ul>
+  );
+}
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+export default function Navbar() {
+  const [openNav, setOpenNav] = React.useState(false);
+
+  const handleToggleNav = () => {
+    setOpenNav(!openNav);
   };
 
-  return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl">Teste de Navbar</h1>
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
-        <ul className={`md:flex md:space-x-4 ${isOpen ? 'block mt-4' : 'hidden'}`}>
-          <li><a href="#" className="block text-white hover:text-gray-400 py-2">Home</a></li>
-          <li><a href="#" className="block text-white hover:text-gray-400 py-2">About</a></li>
-          <li><a href="#" className="block text-white hover:text-gray-400 py-2">Services</a></li>
-          <li><a href="#" className="block text-white hover:text-gray-400 py-2">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  );
-};
+  const handleWindowResize = () => {
+    if (window.innerWidth >= 960) {
+      setOpenNav(false);
+    }
+  };
 
-export default Navbar;
+  React.useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  return (
+    <MaterialNavbar className="mx-auto max-w-screen-xl px-6 py-3">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          variant="h6"
+          className="mr-4 cursor-pointer py-1.5"
+        >
+          Achados & Perdidos
+        </Typography>
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
+        <IconButton
+          variant="text"
+          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          ripple={false}
+          onClick={handleToggleNav}
+        >
+          {openNav ? (
+            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+          ) : (
+            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+          )}
+        </IconButton>
+      </div>
+      <Collapse open={openNav}>
+        <NavList />
+      </Collapse>
+    </MaterialNavbar>
+  );
+}
