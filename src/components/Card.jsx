@@ -3,7 +3,6 @@ import {
     CardHeader,
     CardBody,
     CardFooter,
-    Typography,
     Button,
   } from "@material-tailwind/react";
   
@@ -17,17 +16,15 @@ import {
           />
         </CardHeader>
         <CardBody>
-          <Typography variant="h5" color="blue-gray" className="mb-2">
-            UI/UX Review Check
-          </Typography>
-          <Typography>
-            The place is close to Barceloneta Beach and bus stop just 2 min by
-            walk and near to &quot;Naviglio&quot; where you can enjoy the main
-            night life in Barcelona.
-          </Typography>
+          <p variant="" color="blue-gray" className="mb-1 font-semibold">
+            Alberto José
+          </p>
+          <p>
+            Encontrei na rua do São paulo, junto as bombas da Punangol
+          </p>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button>Read More</Button>
+          <Button>Resgatar</Button>
         </CardFooter>
       </MTCard>
     );

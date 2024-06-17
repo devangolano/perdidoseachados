@@ -9,45 +9,45 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function NavList() {
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="flex flex-col gap-2 items-center lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
+        className=" font-medium"
       >
         <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Pages
+          Principal
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
+        className=" font-medium"
       >
         <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Account
+          Doc Perdido
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
+        className=" font-medium"
       >
         <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Blocks
+          Doc Encontrado
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-medium"
+        className=" font-medium"
       >
         <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Docs
+          Ajuda
         </a>
       </Typography>
     </ul>
@@ -76,7 +76,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <MaterialNavbar className="mx-auto max-w-screen-xl px-6 py-3">
+    <MaterialNavbar className="mx-auto px-6 py-3">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
