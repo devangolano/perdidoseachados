@@ -76,7 +76,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <MaterialNavbar className="mx-auto px-6 py-1">
+    <MaterialNavbar className="mx-auto px-3 py-0">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -91,14 +91,14 @@ export default function Navbar() {
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-16 w-1h-16 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={handleToggleNav}
         >
           {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            <XMarkIcon className="h-8 w-8" strokeWidth={2} />
           ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            <Bars3Icon className="h-8 w-8" strokeWidth={2} />
           )}
         </IconButton>
       </div>
