@@ -14,40 +14,50 @@ function NavList() {
         as="li"
         variant="small"
         color="blue-gray"
-        className=" font-medium"
+        className="font-medium"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Principal
+        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
+          Home
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className=" font-medium"
+        className="font-medium lg:border-l lg:border-gray-300"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Documentos Perdido
+        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
+          Achei um Documento
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className=" font-medium"
+        className="font-medium lg:border-l lg:border-gray-300"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-        Documentos Encontrado
+        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
+          Perdi um Documento
         </a>
       </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className=" font-medium"
+        className="font-medium lg:border-l lg:border-gray-300"
       >
-        <a href="#" className="flex items-center hover:text-blue-500 transition-colors">
-          Ajuda
+        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
+          Procurar um Documento
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="font-medium lg:border-l lg:border-gray-300"
+      >
+        <a href="#" className="flex items-center px-4 hover:text-blue-500 transition-colors">
+          Contato
         </a>
       </Typography>
     </ul>
@@ -84,14 +94,14 @@ export default function Navbar() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5"
         >
-          <img className="w-24" src="/Logo.png" />
+          <img className="w-24" src="/Logo.png" alt="Logo" />
         </Typography>
         <div className="hidden lg:block">
           <NavList />
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-16 w-1h-16 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-16 w-16 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={handleToggleNav}
         >
