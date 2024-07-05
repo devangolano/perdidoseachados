@@ -6,11 +6,11 @@ export function Carrocel() {
     <Carousel className="">
       <div className="relative h-96 w-full">
         <img
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+          src="https://pna.gov.ao/storage/app/public/ensaio/8s5zr9KvOF0lb7MHFuGj1PxWaUgo2R9XkQxNX2Rt.jpeg"
           alt="image 1"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
+        <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/65">
           <div className="w-3/4 text-center md:w-2/4">
             <Typography
               variant="h1"
