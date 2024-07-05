@@ -7,9 +7,9 @@ export function Carrocel() {
     {
       src: "https://pna.gov.ao/storage/app/public/ensaio/8s5zr9KvOF0lb7MHFuGj1PxWaUgo2R9XkQxNX2Rt.jpeg",
       alt: "image 1",
-      title: "The Beauty of Nature",
+      title: "Apanhou um artigo!",
       description:
-        "It is not so much for its beauty that the forest makes a claim upon men's hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit.",
+        "Se apanhou um artigo faz o seguinte pra cadastrar: ",
     },
     {
       src: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80",
@@ -30,13 +30,13 @@ export function Carrocel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // 5000ms = 5 segundos
+    }, 1000); // 5000ms = 5 segundos
 
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
-    <Carousel className="rounded-xl" activeIndex={activeIndex}>
+    <Carousel className="" activeIndex={activeIndex}>
       {slides.map((slide, index) => (
         <div className="relative h-96 w-full" key={index}>
           <img
