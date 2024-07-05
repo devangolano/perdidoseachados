@@ -15,7 +15,7 @@ import {
             alt="card-image"
           />
         </CardHeader>
-        <CardBody>
+        <CardBody className="p-4">
           <p variant="" color="blue-gray" className="mb-1 font-semibold">
             Alberto José
           </p>
@@ -23,7 +23,7 @@ import {
             Encontrei na rua do São paulo, junto as bombas da Punangol
           </p>
         </CardBody>
-        <CardFooter className="pt-0">
+        <CardFooter className="p-4 pt-0">
           <Button>Resgatar</Button>
         </CardFooter>
       </MTCard>
