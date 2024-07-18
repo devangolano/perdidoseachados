@@ -7,10 +7,10 @@ export default function Header(){
           <h1 className="text-2xl w-full md:text-5xl font-bold titulo mb-1">Você perdeu seus documentos?</h1>
           <h1 className="text-xl md:text-4xl font-bold titulo mb-4">Pesquise aqui!!</h1>
           <p className="md:text-xl mb-8">Se você encontrou algum documento na via pública por favor cadastre na nossa plataforma.</p>
-          <div className="flex justify-center items-center">
+          <div className="hidden md:block justify-center items-center">
             <input
               type="text"
-              placeholder="hidden md:block Buscar com nome ou número de identif..."
+              placeholder="Buscar com nome ou número de identif..."
               className="w-full md:w-1/3 px-4 py-3 text-md rounded-l-full focus:outline-none text-black"
             />
             <button className="bg-white text-black px-6 py-3 rounded-r-full hover:bg-purple-200 hover:text-white">Buscar</button>
