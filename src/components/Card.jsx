@@ -14,7 +14,7 @@ export default function Card() {
           <b>Município:</b> Cacuacu <br /> <b>Bairro</b>: Vidrul
         </p>
         <button className="bg-purple-600 text-white px-4 w-full py-2 rounded-md hover:bg-purple-800 transition-colors duration-300">
-          Resgatar Documento
+          Resgatar!
         </button>
       </div>
     </div>
