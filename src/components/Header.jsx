@@ -3,10 +3,10 @@ import Card from "./Card";
 export default function Header(){
     return(
         <header className="bg-black/95 text-white h-full pt-28 md:pt-36 py-16 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold titulo mb-1">Você perdeu seus documentos?</h1>
-          <h1 className="text-4xl font-bold titulo mb-4">Pesquise aqui!!</h1>
-          <p className="text-lg mb-8">Se você encontrou algum documento na via pública por favor cadastre na nossa plataforma.</p>
+        <div className="container mx-auto px-5">
+          <h1 className="text-2xl md:text-5xl font-bold titulo mb-1">Você perdeu seus documentos?</h1>
+          <h1 className="text-xl md:text-4xl font-bold titulo mb-4">Pesquise aqui!!</h1>
+          <p className="md:text-lg mb-8">Se você encontrou algum documento na via pública por favor cadastre na nossa plataforma.</p>
           <div className="flex justify-center items-center">
             <input
               type="text"
