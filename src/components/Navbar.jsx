@@ -1,7 +1,7 @@
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-md py-4">
+    <nav className="fixed w-screen bg-white shadow-md py-4">
       <div className="container mx-auto flex justify-between items-end md:items-center px-4">
         <img
           src="https://t3.ftcdn.net/jpg/05/09/17/46/360_F_509174694_a8jxmbhzeDgJOu0VYNQwDZC61xjZWCtJ.jpg"

@@ -1,32 +1,22 @@
-import {
-    Card as MTCard,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Button,
-  } from "@material-tailwind/react";
-  
-  export default function CustomCard() {
-    return (
-      <MTCard className="mt-2 w-full">
-        <CardHeader color="blue-gray" >
-          <img
-            src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-            alt="card-image"
-          />
-        </CardHeader>
-        <CardBody className="p-4">
-          <p variant="" color="blue-gray" className="mb-1 font-semibold">
-            Alberto José
-          </p>
-          <p>
-            Encontrei na rua do São paulo, junto as bombas da Punangol
-          </p>
-        </CardBody>
-        <CardFooter className="p-4 pt-0">
-          <Button>Resgatar</Button> 
-        </CardFooter>
-      </MTCard>
-    );
-  }
-  
+import React from 'react';
+
+export default function Card() {
+  return (
+    <div className="bg-white text-black p-4 rounded-xl shadow-lg max-w-xs transition-shadow duration-300 hover:shadow-purple-600 border-2 border-purple-800 mx-auto">
+      <img
+        src="https://via.placeholder.com/400x200"
+        alt="Card Image"
+        className="rounded-t-xl w-full"
+      />
+      <div className="p-4">
+        <h2 className="text-xl font-semibold">Card title</h2>
+        <p className="text-gray-600 mb-2">
+          Some quick example text to build on the card title and make up the bulk of the card's content.
+        </p>
+        <button className="bg-purple-600 text-white px-4 rounded-full hover:bg-purple-700 transition-colors duration-300">
+          Button
+        </button>
+      </div>
+    </div>
+  );
+}

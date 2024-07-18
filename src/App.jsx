@@ -1,12 +1,12 @@
 import Navbar from "./components/Navbar";
-import { Carrocel } from "./components/Carrocel";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar />
-     
-    </>
+      <Header/>
+    </div>
   );
 }
 
