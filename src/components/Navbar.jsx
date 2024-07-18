@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-md py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-end md:items-center px-4">
         <img
           src="https://t3.ftcdn.net/jpg/05/09/17/46/360_F_509174694_a8jxmbhzeDgJOu0VYNQwDZC61xjZWCtJ.jpg"
           alt="Logo"
@@ -36,18 +36,17 @@ const Navbar = () => {
             Create Story
           </button>
         </div>
-        <div className="md:hidden flex items-center space-x-4 w-full">
-          <div className='flex items-center justify-center'>
+        <div className="md:hidden flex items-end">
+          <div className='flex items-center justify-between gap-1'>
           <input
             type="text"
             placeholder="Procurar..."
-            className="w-full ml-2 px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            className="w-full px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <FaSearch className='ml-2' onClick={() => alert("teste de clique!")} />
-          </div>
-          <button className="bg-purple-600 text-white px-4 py-1 rounded-full hover:bg-purple-700">
-            Criar
+          <button onClick={() => alert("teste de clique!")} className="bg-purple-600 text-white px-2 py-1 rounded-full hover:bg-purple-700">
+            Buscar
           </button>
+          </div>
         </div>
       </div>
     </nav>
