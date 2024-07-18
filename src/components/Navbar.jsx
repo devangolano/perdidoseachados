@@ -37,7 +37,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="md:hidden flex items-end">
-          <div className='flex items-center justify-between gap-1'>
+          <div className='flex items-center ml-6 justify-between gap-1'>
           <input
             type="text"
             placeholder="Procurar..."
