@@ -10,7 +10,7 @@ export default function Header(){
           <div className="flex justify-center items-center">
             <input
               type="text"
-              placeholder="Buscar com nome ou número de identif..."
+              placeholder="hidden md:block Buscar com nome ou número de identif..."
               className="w-full md:w-1/3 px-4 py-3 text-md rounded-l-full focus:outline-none text-black"
             />
             <button className="bg-white text-black px-6 py-3 rounded-r-full hover:bg-purple-200 hover:text-white">Buscar</button>
