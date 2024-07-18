@@ -43,7 +43,7 @@ const Navbar = () => {
             placeholder="Procurar..."
             className="w-full px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <button onClick={() => alert("teste de clique!")} className="bg-purple-600 text-white px-2 py-1 rounded-full hover:bg-purple-700">
+          <button onClick={() => alert("Buscando documento")} className="bg-purple-600 text-white px-2 py-1 rounded-full hover:bg-purple-700">
             Buscar
           </button>
           </div>
