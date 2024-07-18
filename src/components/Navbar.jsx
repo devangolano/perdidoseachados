@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoSearchSharp } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -40,10 +40,10 @@ const Navbar = () => {
           <div className='flex items-center justify-center'>
           <input
             type="text"
-            placeholder="Search..."
-            className="w-full ml-3 px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+            placeholder="Procurar..."
+            className="w-full ml-2 px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <IoSearchSharp className='w-10' />
+          <FaSearch className='ml-2' onClick={alert="teste de clique!"} />
           </div>
           <button className="bg-purple-600 text-white px-4 py-1 rounded-full hover:bg-purple-700">
             Criar
