@@ -9,7 +9,7 @@ const Navbar = () => {
         <img
           src="https://t3.ftcdn.net/jpg/05/09/17/46/360_F_509174694_a8jxmbhzeDgJOu0VYNQwDZC61xjZWCtJ.jpg"
           alt="Logo"
-          className="h-8"
+          className="h-10"
         />
         <div className="hidden md:flex ml-10 space-x-4">
           <a href="#" className="text-gray-800 hover:text-purple-600">Home</a>
