@@ -16,7 +16,7 @@ export default function Header(){
             <button className="bg-white text-black px-6 py-3 rounded-r-full hover:bg-purple-200 hover:text-white">Buscar</button>
            </div>
         </div>
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-2">
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mx-auto max-w-7xl px-2">
            <Card />
            <Card />
            <Card />

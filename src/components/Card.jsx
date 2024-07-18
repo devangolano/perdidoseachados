@@ -9,12 +9,12 @@ export default function Card() {
         className="rounded-t-xl w-full"
       />
       <div className="p-2 md:p-4">
-        <h2 className="text-xl items-start font-semibold">Card title</h2>
+        <h2 className="text-xl items-start font-semibold">Darlene José</h2>
         <p className="text-gray-600 mb-2">
-          Some quick example text to build on the card title and make.
+          <b>Município:</b> Cacuacu <br /> <b>Bairro</b>: Vidrul
         </p>
         <button className="bg-purple-600 text-white px-4 w-full py-2 rounded-md hover:bg-purple-800 transition-colors duration-300">
-          Button
+          Resgatar Documento
         </button>
       </div>
     </div>
