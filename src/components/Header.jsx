@@ -2,7 +2,7 @@ import Card from "./Card";
 
 export default function Header(){
     return(
-        <header className="bg-black/95 text-white h-screen pt-36 py-16 text-center">
+        <header className="bg-black/95 text-white h-full pt-36 py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold titulo mb-1">Você perdeu seus documentos?</h1>
           <h1 className="text-4xl font-bold titulo mb-4">Pesquise aqui!!</h1>
@@ -15,8 +15,17 @@ export default function Header(){
             />
             <button className="bg-white text-black px-6 py-3 rounded-r-full hover:bg-purple-200 hover:text-white">Buscar</button>
            </div>
-           <Card />
         </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 px-2">
+           <Card />
+           <Card />
+           <Card />
+           <Card />
+           <Card />
+           <Card />
+           <Card />
+           <Card />
+           </div>
       </header>
      );
 }
