@@ -24,7 +24,7 @@ import {
           </p>
         </CardBody>
         <CardFooter className="p-4 pt-0">
-          <Button>Resgatar</Button>
+          <Button>Resgatar</Button> 
         </CardFooter>
       </MTCard>
     );

@@ -1,120 +1,57 @@
-import React from "react";
-import {
-  Navbar as MaterialNavbar,
-  Collapse,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { useState } from 'react';
+import { IoSearchSharp } from "react-icons/io5";
 
-function NavList() {
+
+const Navbar = () => {
   return (
-    <ul className="flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="font-medium"
-      >
-        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
-          Home
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="font-medium lg:border-l lg:border-gray-300"
-      >
-        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
-          Achei um Documento
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="font-medium lg:border-l lg:border-gray-300"
-      >
-        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
-          Perdi um Documento
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="font-medium lg:border-l lg:border-gray-300"
-      >
-        <a href="#" className="flex items-center pl-5 hover:text-blue-500 transition-colors">
-          Procurar um Documento
-        </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="font-medium lg:border-l lg:border-gray-300"
-      >
-        <a href="#" className="flex items-center px-4 hover:text-blue-500 transition-colors">
-          Contato
-        </a>
-      </Typography>
-    </ul>
-  );
-}
-
-export default function Navbar() {
-  const [openNav, setOpenNav] = React.useState(false);
-
-  const handleToggleNav = () => {
-    setOpenNav(!openNav);
-  };
-
-  const handleWindowResize = () => {
-    if (window.innerWidth >= 960) {
-      setOpenNav(false);
-    }
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
-  return (
-    <MaterialNavbar className="mx-auto px-3 py-0">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          <img className="w-24" src="/Logo.png" alt="Logo" />
-        </Typography>
-        <div className="hidden lg:block">
-          <NavList />
+    <nav className="bg-white shadow-md py-4">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        <img
+          src="https://t3.ftcdn.net/jpg/05/09/17/46/360_F_509174694_a8jxmbhzeDgJOu0VYNQwDZC61xjZWCtJ.jpg"
+          alt="Logo"
+          className="h-8"
+        />
+        <div className="hidden md:flex ml-10 space-x-4">
+          <a href="#" className="text-gray-800 hover:text-purple-600">Home</a>
+          <a href="#" className="text-gray-800 hover:text-purple-600">Services</a>
+          <a href="#" className="text-gray-800 hover:text-purple-600">Contact us</a>
+          <a href="#" className="text-gray-800 hover:text-purple-600">Our projects</a>
         </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-16 w-16 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={handleToggleNav}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-8 w-8" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-8 w-8" strokeWidth={2} />
-          )}
-        </IconButton>
+        <div className="hidden md:flex items-center space-x-4">
+          <button className="text-gray-800 hover:text-purple-600">
+            <i className="far fa-comment-dots"></i>
+          </button>
+          <button className="text-gray-800 hover:text-purple-600">
+            <i className="far fa-bell"></i>
+          </button>
+          <div className="relative">
+            <img
+              src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+              alt="Profile"
+              className="h-8 w-8 rounded-full"
+            />
+            <span className="absolute bottom-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-green-400"></span>
+          </div>
+          <button className="bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700">
+            Create Story
+          </button>
+        </div>
+        <div className="md:hidden flex items-center space-x-4 w-full">
+          <div className='flex items-center justify-center'>
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full ml-3 px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
+          />
+          <IoSearchSharp className='w-10' />
+          </div>
+          <button className="bg-purple-600 text-white px-4 py-1 rounded-full hover:bg-purple-700">
+            Criar
+          </button>
+        </div>
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-      </Collapse>
-    </MaterialNavbar>
+    </nav>
   );
-}
+};
+
+export default Navbar;
