@@ -43,7 +43,7 @@ const Navbar = () => {
             placeholder="Procurar..."
             className="w-full ml-2 px-2 py-1 border rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600"
           />
-          <FaSearch className='ml-2' onClick={alert="teste de clique!"} />
+          <FaSearch className='ml-2' onClick={() => alert("teste de clique!")} />
           </div>
           <button className="bg-purple-600 text-white px-4 py-1 rounded-full hover:bg-purple-700">
             Criar
